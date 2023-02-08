@@ -8,9 +8,10 @@ import defaultAvatar from '../../../assets/images/profile/default_avatar.png';
 
 export type TaskPreviewCommentProps = {
   comment: Comment;
+  onDeleteComment(commentId: string): void;
 };
 
-export function TaskPreviewComment({ comment }: TaskPreviewCommentProps) {
+export function TaskPreviewComment({ comment, onDeleteComment }: TaskPreviewCommentProps) {
   const { datetime, text, author } = comment;
   const { lastname, name, profilePhoto } = author;
 
@@ -30,6 +31,8 @@ export function TaskPreviewComment({ comment }: TaskPreviewCommentProps) {
           <div className={s.date}>{formatDate(datetime)}</div>
         </div>
         <p className={s.text}>{text}</p>
+        {/* handle Click */}
+        <button onClick={() => onDeleteComment(comment.uuid)}>Click here to delete comment</button>
       </div>
     </div>
   );
