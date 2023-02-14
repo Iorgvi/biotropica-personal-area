@@ -3,12 +3,12 @@ import { getMessaging, getToken, onMessage } from 'firebase/messaging';
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
-  apiKey: process.env.FB_API_KEY,
-  authDomain: process.env.FB_AUTH_DOMAIN,
-  projectId: process.env.FB_PROJECT_ID,
-  storageBucket: process.env.FB_STORAGE_BUCKET,
-  messagingSenderId: process.env.FB_MESSAGING_SENDER_ID,
-  appId: process.env.FB_APP_ID,
+  apiKey: 'AIzaSyBcU3zPlHaByN0GETt1V26bF1isNrTdCzc',
+  authDomain: 'test-pet-project-19244.firebaseapp.com',
+  projectId: 'test-pet-project-19244',
+  storageBucket: 'test-pet-project-19244.appspot.com',
+  messagingSenderId: '524003796812',
+  appId: '1:524003796812:web:c7cf232be7f13268f5d1e9',
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
